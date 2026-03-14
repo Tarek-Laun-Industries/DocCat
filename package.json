@@ -1,0 +1,27 @@
+{
+  "name": "mdrdocs",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "https://github.com/Tarek-Laun-Industries/MDRDocs#readme",
+  "bugs": {
+    "url": "https://github.com/Tarek-Laun-Industries/MDRDocs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tarek-Laun-Industries/MDRDocs.git"
+  },
+  "author": "Tarek Laun",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/core/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/core/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
