@@ -2,6 +2,7 @@ import { Command } from "commander"
 import inquirer from "inquirer";
 import fs from "fs";
 import * as builder from "../../builder/builder.js";
+import { buildTailwind } from "../../builder/tailwind.js";
 import { resolvePath } from "../../utils.js";
 
 // New Project Command
@@ -34,6 +35,9 @@ buildCommand
         if (fs.existsSync(inputPath + "assets/")) {
             fs.cpSync(inputPath + "assets/", output + "assets/", { recursive: true });
         }
+
+        // Build Tailwind CSS if needed
+        await buildTailwind(inputPath, output);
 
         // Build the Pages in the src directory.
         if (!await fs.existsSync(inputPath + "src/")) {
