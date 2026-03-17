@@ -1,16 +1,8 @@
 import { Command } from "commander"
-import path from 'path';
 import inquirer from "inquirer";
 import fs from "fs";
 import * as builder from "../../builder/builder.js";
-
-function resolvePath(userInput: string): string {
-    let resolvedPath = path.resolve(process.cwd(), userInput);
-    if (!resolvedPath.endsWith('/')) {
-        resolvedPath += '/';
-    }
-    return resolvedPath;
-}
+import { resolvePath } from "../../utils.js";
 
 // New Project Command
 const buildCommand = new Command('build');
