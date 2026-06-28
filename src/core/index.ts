@@ -2,6 +2,7 @@
 import { Command } from 'commander';
 import { newCommand } from './commands/new.js';
 import { buildCommand } from './commands/build.js';
+import { addCommand } from './commands/add.js';
 
 const program = new Command();
 
@@ -12,6 +13,7 @@ program
 
 program.addCommand(newCommand);
 program.addCommand(buildCommand);
+program.addCommand(addCommand);
 
 // Commands we Need.
 // - new: Create a new Doc Cat project
